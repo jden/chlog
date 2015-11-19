@@ -1,0 +1,33 @@
+{
+  "name": "chlog",
+  "version": "1.0.0",
+  "description": "auto-generate a markdown changelog from git commit history",
+  "main": "index.js",
+  "scripts": {
+    "test": "quality",
+    "preversion": "mv changelog.md changelog.old && echo \"## $npm_package_version\" >> changelog.md && echo >> changelog.md && chlog >> changelog.md && cat changelog.old >> changelog.md && rm changelog.old && git add changelog.md"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "bin": {
+    "chlog": "index.js"
+  },
+  "keywords": [
+    "changelog"
+  ],
+  "author": "jden <jason@denizac.org>",
+  "license": "ISC",
+  "devDependencies": {
+    "quality": "^1.0.5"
+  },
+  "dependencies": {
+    "dotjson": "^0.1.3",
+    "find-package": "^1.0.0",
+    "find-root": "^0.1.1",
+    "git-history": "0.0.2",
+    "github-url-from-git": "^1.4.0",
+    "split": "^1.0.0",
+    "through2": "^2.0.0"
+  }
+}

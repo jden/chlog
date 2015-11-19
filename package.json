@@ -1,6 +1,6 @@
 {
   "name": "chlog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "auto-generate a markdown changelog from git commit history",
   "main": "index.js",
   "scripts": {

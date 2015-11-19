@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "dotjson": "^0.1.3",
-    "find-package": "^1.0.0",
     "find-root": "^0.1.1",
     "git-history": "0.0.2",
     "github-url-from-git": "^1.4.0",

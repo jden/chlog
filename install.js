@@ -8,11 +8,11 @@ const script = 'mv changelog.md changelog.old && echo \"## $npm_package_version\
 const packagePath = pathJoin(findRoot(process.cwd()), 'package.json')
 
 if (dotjson.get(packagePath, 'scripts.preversion')) {
-	console.log('warning: there is already a preversion script defined; exiting...')
-	process.exit()
+  console.log('warning: there is already a preversion script defined; exiting...')
+  process.exit()
 }
 
 dotjson.set(packagePath, {
-	'scripts.preversion': script
+  'scripts.preversion': script
 })
 console.log('installed chlog in scripts.preversion')
